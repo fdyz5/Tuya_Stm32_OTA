@@ -1,0 +1,25 @@
+ÅäÍø:
+AT+CWAUTOCONN=1
+
+
+OK
+AT+CWSTARTSMART=3
+
+OK
+smartconfig type:ESPTOUCH
+Smart get wifi info
+ssid:qqqqq
+password:11223344
+WIFI CONNECTED
+WIFI GOT IP
+smartconfig connected wifi
+
+
+
+Ä£¿éÖØÆô
+ready
+WIFI CONNECTED
+WIFI GOT IP
+
+¶ÏÍø
+WIFI DISCONNECT

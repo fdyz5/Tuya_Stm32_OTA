@@ -1,0 +1,73 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: d 5, s, LIC=ZB4EI-TUQMW-12ULE-5WG1V-C0LQN-79NA7
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.14.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DARMSTM.DLL V1.65.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TARMSTM.DLL V1.64.0.0
+ 
+<h2>Project:</h2>
+E:\2021项目\涂鸦\tuya\USER\Template.uvprojx
+Project File Date:  03/17/2022
+
+<h2>Output:</h2>
+Build target 'Template'
+compiling main.c...
+main.c(19): warning:  #188-D: enumerated type mixed with another type
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB|RCC_APB2Periph_AFIO, ENABLE);       //使能PB端口时钟
+main.c(21): warning:  #188-D: enumerated type mixed with another type
+        GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable , ENABLE); //对PB4管脚进行重新映射
+main.c: 2 warnings, 0 errors
+compiling usart.c...
+..\SYSTEM\usart\usart.c(70): warning:  #188-D: enumerated type mixed with another type
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);//??GPIOA??
+..\SYSTEM\usart\usart.c(71): warning:  #188-D: enumerated type mixed with another type
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2,ENABLE);//??USART2??  
+..\SYSTEM\usart\usart.c(87): warning:  #188-D: enumerated type mixed with another type
+        NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;                 //IRQ通道使能
+..\SYSTEM\usart\usart.c(100): warning:  #188-D: enumerated type mixed with another type
+    USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);//开启串口接受中断
+..\SYSTEM\usart\usart.c(101): warning:  #188-D: enumerated type mixed with another type
+    USART_Cmd(USART2, ENABLE);                    //使能串口1 
+..\SYSTEM\usart\usart.c: 5 warnings, 0 errors
+compiling connect_wifi.c...
+..\SYSTEM\connect_wifi.c(20): warning:  #223-D: function "Delay_ms" declared implicitly
+                                                Delay_ms(100);
+..\SYSTEM\connect_wifi.c: 1 warning, 0 errors
+compiling mcu_api.c...
+compiling protocol.c...
+..\mcu_sdk\protocol.c(100): warning:  #223-D: function "UART2_SendByte" declared implicitly
+                        UART2_SendByte(value);
+..\mcu_sdk\protocol.c: 1 warning, 0 errors
+compiling system.c...
+..\mcu_sdk\system.c(150): warning:  #177-D: variable "str" was declared but never referenced
+      unsigned char str[10] = {0};
+..\mcu_sdk\system.c: 1 warning, 0 errors
+linking...
+Program Size: Code=5548 RO-data=344 RW-data=60 ZI-data=2132  
+FromELF: creating hex file...
+After Build - User command #1: fromelf.exe --bin --output=..\OBJ\Template.bin ..\OBJ\Template.axf
+"..\OBJ\Template.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\2021项目\涂鸦\tuya\USER\RTE
+  D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>
